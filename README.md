@@ -14,7 +14,7 @@ Allows separate dial code, drop down, initial country (auto or manual), exclude 
 This ACF field type is compatible with:
 * ACF 5
 
-## Installation 
+## Installation
 
 1. Copy the `acf-intl-tel-input` folder into your `wp-content/plugins` folder
 2. Activate the International Telephone Input plugin via the plugins admin page
@@ -22,5 +22,11 @@ This ACF field type is compatible with:
 4. Read the description above for usage instructions
 
 ## Changelog
+
+### Version 1.1.0 
+
+* incorporates bugfixes by https://github.com/aluckyar
+* add GitHub Updater compatibility
+* additional bugfixes
 
 ### Version 1.0.0 - Inital Commit

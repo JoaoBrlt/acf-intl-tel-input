@@ -2,7 +2,7 @@
 Contributors: Jony Hayama
 Tags: acf, acf-pro, intl-tel-input
 Requires at least: 3.6.0
-Tested up to: 4.9.0
+Tested up to: 5.0.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -32,6 +32,11 @@ This ACF field type is compatible with:
 4. Read the description above for usage instructions
 
 == Changelog ==
+
+= 1.1.0 =
+* incorporates bugfixes by https://github.com/aluckyar
+* add GitHub Updater compatibility
+* additional bugfixes
 
 = 1.0.0 =
 * Initial Release.
