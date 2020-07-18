@@ -23,18 +23,18 @@ class acf_field_intl_tel_input extends acf_field {
 	*  @param	n/a
 	*  @return	n/a
 	*/
-	
+
 	function __construct( $settings ) {
-		
+
 		// Name.
 		$this->name = 'intl_tel_input';
-		
+
 		// Label.
 		$this->label = __('International Telephone Input', 'acf-intl-tel-input');
-		
+
 		// Category.
 		$this->category = 'jquery';
-		
+
 		// Field settings.
 		$this->defaults = [
 			'allowDropdown' => true,
@@ -51,10 +51,10 @@ class acf_field_intl_tel_input extends acf_field {
 
 		// Parent constructor.
 		parent::__construct();
-		
+
 	}
-	
-	
+
+
 	/*
 	*  render_field_settings()
 	*
@@ -67,7 +67,7 @@ class acf_field_intl_tel_input extends acf_field {
 	*  @param	$field (array) the $field being edited
 	*  @return	n/a
 	*/
-	
+
 	function render_field_settings( $field ) {
 
 		// Country format link.
@@ -139,7 +139,7 @@ class acf_field_intl_tel_input extends acf_field {
 		]);
 
 	}
-	
+
 
 	/*
 	*  render_field()
@@ -153,13 +153,29 @@ class acf_field_intl_tel_input extends acf_field {
 	*  @param	$field (array) the $field being edited
 	*  @return	n/a
 	*/
-	
+
 	function render_field( $field ) {
 
-		// Set hidden input attribute.
-		$attr[] = 'data-hiddenInput="' . esc_attr($field['key']) . '"';
+		// Hidden input.
+		$hidden_input = [
+			'name'	=> $field['name'],
+			'value'	=> $field['value']
+		];
 
-		// Parse settings.
+		// Phone input.
+		$phone_input = [
+			'type'		=> 'tel',
+			'id'		=> $field['id'],
+			'class'		=> $field['class'],
+			'value'		=> $field['value']['phone']
+		];
+
+		// Special attributes.
+		if( !empty($field['readonly']) ) $phone_input['readonly'] = 'readonly';
+		if( !empty($field['disabled']) ) $phone_input['disabled'] = 'disabled';
+		if( !empty($field['required']) ) $phone_input['required'] = 'required';
+
+		// Field attributes.
 		foreach( $this->defaults as $key => $value ){
 			$value = $field[$key];
 
@@ -173,20 +189,16 @@ class acf_field_intl_tel_input extends acf_field {
 			}
 
 			// Append attribute.
-			$attr[] = 'data-' . $key .'="' . $value . '"';
+			$phone_input['data-' . $key] = $value;
 		}
 
-		// Join attributes.
-		$attr = implode( ' ', $attr );
-
-?>
-<input type="tel" value="<?php echo esc_attr($field['value']['phone']) ?>" <?php echo $attr; ?> <?php echo $field['required'] ? 'required="required"' : ''; ?>>
-<input type="hidden" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>">
-<?php
+		// Render the fields.
+		acf_hidden_input( $hidden_input );
+		acf_text_input( $phone_input );
 
 	}
-	
-		
+
+
 	/*
 	*  input_admin_enqueue_scripts()
 	*
@@ -202,7 +214,7 @@ class acf_field_intl_tel_input extends acf_field {
 	*/
 
 	function input_admin_enqueue_scripts() {
-		
+
 		// Get plugin settings.
 		$url = $this->settings['url'];
 		$version = $this->settings['version'];
@@ -286,7 +298,7 @@ class acf_field_intl_tel_input extends acf_field {
 
 		// Enqueue stylesheets.
 		wp_enqueue_style('acf-intl-tel-input');
-		
+
 	}
 
 	/*
