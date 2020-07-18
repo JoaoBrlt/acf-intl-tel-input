@@ -1,0 +1,65 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: acf-intl-tel-input\n"
+"POT-Creation-Date: 2020-07-18 19:51+0200\n"
+"PO-Revision-Date: 2020-07-18 19:59+0200\n"
+"Language-Team: João Brilhante\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"Last-Translator: \n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: acf-intl-tel-input.php\n"
+"X-Poedit-SearchPath-1: fields/class-acf-field-intl-tel-input.php\n"
+
+#: fields/class-acf-field-intl-tel-input.php:33
+msgid "International Telephone Input"
+msgstr "International Telephone Input"
+
+#: fields/class-acf-field-intl-tel-input.php:78
+msgid "Separate dial code"
+msgstr "Indicatif téléphonique séparé"
+
+#: fields/class-acf-field-intl-tel-input.php:87
+msgid "Allow drop down"
+msgstr "Autoriser la liste déroulante"
+
+#: fields/class-acf-field-intl-tel-input.php:96
+msgid "Initial country"
+msgstr "Pays initial"
+
+#: fields/class-acf-field-intl-tel-input.php:97
+#: fields/class-acf-field-intl-tel-input.php:105
+#: fields/class-acf-field-intl-tel-input.php:114
+#: fields/class-acf-field-intl-tel-input.php:123
+#, php-format
+msgid "Comma separated list of country codes (%s)"
+msgstr "Liste des codes de pays séparés par des virgules (%s)"
+
+#: fields/class-acf-field-intl-tel-input.php:104
+msgid "Exclude countries"
+msgstr "Pays exclus"
+
+#: fields/class-acf-field-intl-tel-input.php:113
+msgid "Only countries"
+msgstr "Pays sélectionnés"
+
+#: fields/class-acf-field-intl-tel-input.php:122
+msgid "Preferred countries"
+msgstr "Pays privilégiés"
+
+#: fields/class-acf-field-intl-tel-input.php:131
+msgid "Placeholder number type"
+msgstr "Format du téléphone dans l'espace réservé"
+
+#: fields/class-acf-field-intl-tel-input.php:136
+msgid "Mobile"
+msgstr "Téléphone mobile"
+
+#: fields/class-acf-field-intl-tel-input.php:137
+msgid "Fixed line"
+msgstr "Téléphone fixe"
