@@ -1,27 +1,27 @@
 <?php
 
 /*
-Plugin Name: Advanced Custom Fields: International Telephone Input
-Plugin URI: https://github.com/squarecandy/acf-intl-tel-input
-GitHub Plugin URI: https://github.com/squarecandy/acf-intl-tel-input
-Description: Adds International Telephone Input to ACF.
-Version: 1.1.0
-Author: Jony Hayama
-Author URI: http://jony.co
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-*/
+ * Plugin Name: Advanced Custom Fields: International Telephone Input
+ * Plugin URI: https://github.com/JoaoBrlt/acf-intl-tel-input
+ * Description: Adds International Telephone Input to Advanced Custom Fields.
+ * Version: 1.2.0
+ * Author: João Brilhante
+ * Author URI: http://joao.brilhante.dev
+ * License: GPLv3
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ */
 
-// exit if accessed directly
+// Exit if accessed directly.
 if( ! defined( 'ABSPATH' ) ) exit;
 
 
-// check if class already exists
-if( !class_exists('jony_acf_plugin_intl_tel_input') ) :
+// Check if class already exists.
+if( !class_exists('acf_plugin_intl_tel_input') ) :
 
-class jony_acf_plugin_intl_tel_input {
 
-	// vars
+class acf_plugin_intl_tel_input {
+
+	// Plugin settings.
 	var $settings;
 
 
@@ -40,23 +40,16 @@ class jony_acf_plugin_intl_tel_input {
 
 	function __construct() {
 
-		// settings
-		// - these will be passed into the field class.
-		$this->settings = array(
-			'version'	=> '1.1.0',
-			'url'		=> plugin_dir_url( __FILE__ ),
-			'path'		=> plugin_dir_path( __FILE__ )
-		);
+		// Plugin settings.
+		$this->settings = [
+			'version' => '1.2.0',
+			'url'     => plugin_dir_url( __FILE__ ),
+			'path'    => plugin_dir_path( __FILE__ )
+		];
 
 
-		// set text domain
-		// https://codex.wordpress.org/Function_Reference/load_plugin_textdomain
-		load_plugin_textdomain( 'acf-intl-tel-input', false, plugin_basename( dirname( __FILE__ ) ) . '/lang' );
-
-
-		// include field
-		add_action('acf/include_field_types', 	array($this, 'include_field_types')); // v5
-		add_action('acf/register_fields', 		array($this, 'include_field_types')); // v4
+		// Include the field.
+		add_action( 'acf/include_field_types', [$this, 'include_field_types'] );
 
 	}
 
@@ -76,23 +69,23 @@ class jony_acf_plugin_intl_tel_input {
 
 	function include_field_types( $version = false ) {
 
-		// support empty $version
-		if( !$version ) $version = 5;
+		// Load text domain.
+		load_plugin_textdomain( 'acf-intl-tel-input', false, plugin_basename( dirname( __FILE__ ) ) . '/lang' );
 
 
-		// include
-		include_once('fields/class-jony-acf-field-intl-tel-input-v' . $version . '.php');
+		// Include the field.
+		include_once( 'fields/class-acf-field-intl-tel-input.php' );
 
 	}
 
 }
 
 
-// initialize
-new jony_acf_plugin_intl_tel_input();
+// Initialize the plugin.
+new acf_plugin_intl_tel_input();
 
 
-// class_exists check
+// class_exists check.
 endif;
 
 ?>
