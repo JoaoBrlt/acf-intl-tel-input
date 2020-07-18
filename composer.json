@@ -1,0 +1,25 @@
+{
+  "name": "joaobrlt/acf-intl-tel-input",
+  "type": "wordpress-plugin",
+  "description": "Advanced Custom Fields: International Telephone Input",
+  "authors": [
+    {
+      "name": "João Brilhante",
+      "email": "joao.brilhante@outlook.com",
+      "homepage": "https://joao.brilhante.dev"
+    }
+  ],
+  "license": "GPLv3",
+  "keywords": [
+    "acf",
+    "intl",
+    "tel",
+    "phone",
+    "telephone",
+    "input",
+    "field"
+  ],
+  "require": {
+      "php": ">=5.6"
+  }
+}
