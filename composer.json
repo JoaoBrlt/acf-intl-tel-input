@@ -5,8 +5,19 @@
   "authors": [
     {
       "name": "João Brilhante",
-      "email": "joao.brilhante@outlook.com",
       "homepage": "https://joao.brilhante.dev"
+    },
+    {
+      "name": "Jony Hayama",
+      "homepage": "https://github.com/jonyhayama"
+    },
+    {
+      "name": "Peter Wise",
+      "homepage": "https://github.com/petertwise"
+    },
+    {
+      "name": "Alejandro Lucena",
+      "homepage": "https://github.com/aluckyar"
     }
   ],
   "license": "GPLv3",
