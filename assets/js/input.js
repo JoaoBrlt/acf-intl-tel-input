@@ -16,13 +16,11 @@
 	 */
 
 	function initialize_field( $field ) {
-
-		// Field.
-		const $phoneInput = $field.find('input[type=tel]');
-
 		// Hidden field.
-		const $hiddenName = $phoneInput.attr('data-hiddenInput');
-		const $hiddenInput = $('input[name=acf\\[' + $hiddenName + '\\]]');
+		const $hiddenInput = $field.find('input[type=hidden]');
+
+		// Phone field.
+		const $phoneInput = $field.find('input[type=tel]');
 
 		// Field attributes.
 		const $allowDropdown = $phoneInput.attr('data-allowDropdown');
