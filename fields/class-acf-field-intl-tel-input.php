@@ -156,6 +156,12 @@ class acf_field_intl_tel_input extends acf_field {
 
 	function render_field( $field ) {
 
+		// Default the value.
+		$field['value'] = wp_parse_args($field['value'], [
+			'phone'			=> '',
+			'nationalPhone'	=> '',
+		]);
+
 		// Hidden input.
 		$hidden_input = [
 			'name'	=> $field['name'],
