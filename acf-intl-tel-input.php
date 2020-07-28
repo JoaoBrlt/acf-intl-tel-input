@@ -4,7 +4,7 @@
  * Plugin Name: Advanced Custom Fields: International Telephone Input
  * Plugin URI: https://github.com/JoaoBrlt/acf-intl-tel-input
  * Description: Adds International Telephone Input to Advanced Custom Fields.
- * Version: 1.2.0
+ * Version: 1.2.2
  * Author: João Brilhante
  * Author URI: http://joao.brilhante.dev
  * License: GPLv3
