@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.2] - 2020-07-28
+
+- Fix - Fixed bug that appeared on new posts.
+
 ## [1.2.1] - 2020-07-18
 
 - i18n - Add the plugin translation template.

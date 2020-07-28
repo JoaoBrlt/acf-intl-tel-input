@@ -102,17 +102,26 @@ $phone_field = [
 
 == Changelog ==
 
+= [1.2.2] =
+* Fix - Fixed bug that appeared on new posts.
+
+= [1.2.1] =
+* i18n - Add the plugin translation template.
+* i18n - Add the French (France) translation files.
+* Fix - Fixed bug making multiple telephone inputs unusable.
+* New - Support the `required`, `disabled` and `readonly` attributes.
+* New - Add Editor Config file.
+
 = 1.2.0 =
-* Update the version of [International Telephone Input](https://github.com/jackocnr/intl-tel-input) to v17.0.0.
-* Update the version of [JavaScript Cookie](https://github.com/js-cookie/js-cookie) to v2.2.1.
-* Save phone as object (with the international phone and the national phone).
-* Add the option to choose the placeholder number type.
-* Add Composer compatibility.
-* Additional bug fixes.
+* New - Update the version of [International Telephone Input](https://github.com/jackocnr/intl-tel-input) to v17.0.0.
+* New - Update the version of [JavaScript Cookie](https://github.com/js-cookie/js-cookie) to v2.2.1.
+* New - Save phone as object (with the international phone and the national phone).
+* New - Add the option to choose the placeholder number type.
+* New - Add Composer compatibility.
 
 = 1.1.0 =
-* Add GitHub Updater compatibility
-* Additional bugfixes
+* New - Add GitHub Updater compatibility.
+* Fix - Bug fixes.
 
 = 1.0.0 =
 * Initial Release.
